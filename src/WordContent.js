@@ -9,10 +9,9 @@ export default function WordContent(props) {
   let meanings = props.data.meanings;
 
   return (
-    <div className="WordContent">
+    <div className="WordContent container">
       <h3 className="Word fw-bold fs-1">{word}</h3>
       <p className="Phonetic fst-italic">{phonetic}</p>
-
       <Meanings meanings={meanings} />
     </div>
   );

@@ -8,7 +8,7 @@
   font-family: "Inter", sans-serif;
 }
 
-.Dictionary {
+.Dictionary-header {
   background-color: #eafcfc;
   margin: 0;
   padding: 80px 20px;
@@ -29,6 +29,23 @@
   font-size: 20px;
 }
 
-.WordContent {
+.indvMeanings {
+  border: solid 1px black;
+  margin: 20px 0;
   padding: 20px;
+  border-radius: 10px;
+}
+
+.WordContent {
+  padding: 40px;
+  max-width: 800px;
+}
+
+footer {
+  font-size: 13px;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
 }

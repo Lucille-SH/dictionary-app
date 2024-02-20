@@ -37,7 +37,7 @@ export default function Dictionary() {
   if (loaded) {
     return (
       <div>
-        <div className="Dictionary">
+        <div className="Dictionary-header">
           <header>
             <h1>Dictionary</h1>
             <h2 className="pb-4">What word do you want to look up?</h2>
@@ -52,24 +52,76 @@ export default function Dictionary() {
           </header>
         </div>
         <WordContent data={results} />
+        <div>
+          <footer className="pb-5">
+            This page was coded by
+            <a
+              href="https://github.com/Lucille-SH"
+              target="_blank"
+              rel="noreferrer">
+              {" "}
+              Lucille Shankland
+            </a>
+            , is open-sourced on{" "}
+            <a
+              href="https://github.com/Lucille-SH/dictionary-app"
+              target="_blank"
+              rel="noreferrer">
+              Github
+            </a>{" "}
+            and hosted by{" "}
+            <a
+              href="https://dictionary-app-ls.netlify.app/"
+              target="_blank"
+              rel="noreferrer">
+              Netlify
+            </a>
+          </footer>
+        </div>
       </div>
     );
   } else {
     return (
-      <div className="Dictionary">
-        <header>
-          <h1>Dictionary</h1>
-          <h2 className="pb-4">What word do you want to look up?</h2>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="search"
-              placeholder="Enter a word"
-              onChange={handleChange}
-              autoFocus="on"
-            />
-            <input type="submit" value="Search" />
-          </form>
-        </header>
+      <div>
+        <div className="Dictionary-header">
+          <header>
+            <h1>Dictionary</h1>
+            <h2 className="pb-4">What word do you want to look up?</h2>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="search"
+                placeholder="Enter a word"
+                onChange={handleChange}
+                autoFocus="on"
+              />
+              <input type="submit" value="Search" />
+            </form>
+          </header>
+        </div>
+        <footer className="p-5">
+          This page was coded by
+          <a
+            href="https://github.com/Lucille-SH"
+            target="_blank"
+            rel="noreferrer">
+            {" "}
+            Lucille Shankland
+          </a>
+          , is open-sourced on{" "}
+          <a
+            href="https://github.com/Lucille-SH/dictionary-app"
+            target="_blank"
+            rel="noreferrer">
+            Github
+          </a>{" "}
+          and hosted by{" "}
+          <a
+            href="https://dictionary-app-ls.netlify.app/"
+            target="_blank"
+            rel="noreferrer">
+            Netlify
+          </a>
+        </footer>
       </div>
     );
   }
