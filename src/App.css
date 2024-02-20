@@ -28,3 +28,7 @@
 .App .Word {
   font-size: 20px;
 }
+
+.WordContent {
+  padding: 20px;
+}
