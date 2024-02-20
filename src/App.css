@@ -1,10 +1,30 @@
-.App .App-logo {
-  max-width: 12%;
+.App-logo {
+  max-width: 80px;
   display: block;
-  margin: 40px auto;
+  margin: 10px auto;
+}
+
+.App {
+  font-family: "Inter", sans-serif;
+}
+
+.Dictionary {
+  background-color: #eafcfc;
+  margin: 0;
+  padding: 80px 20px;
+  text-align: center;
 }
 
 .App h1 {
-  text-align: center;
   font-size: 55px;
+  line-height: 1.5;
+}
+
+.App h2 {
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.App .Word {
+  font-size: 20px;
 }

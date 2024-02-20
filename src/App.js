@@ -1,15 +1,15 @@
+import React from "react";
 import logo from "./logo-3.png";
 import "bootstrap/dist/css/bootstrap.css";
+import Dictionary from "./Dictionary";
 
 import "./App.css";
 
-export default function App() {
+export default function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo img-fluid" alt="logo" />
-        <h1>Dictionary</h1>
-      </header>
+      <img src={logo} className="App-logo img-fluid" alt="logo" />
+      <Dictionary />
     </div>
   );
 }
