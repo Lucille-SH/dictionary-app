@@ -10,6 +10,12 @@ export default function Dictionary(props) {
   let [definition, setDefinition] = useState("");
   let [loaded, setLoaded] = useState(false);
 
+  useEffect(() => {
+    return () => {
+      setLoaded(false);
+    };
+  }, [word]);
+
   function handleResponse(response) {
     console.log(response.data.word);
     setLoaded(true);
