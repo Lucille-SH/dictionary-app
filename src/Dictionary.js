@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "bootstrap/dist/css/bootstrap.css";
-
+import axios from "axios";
+import WordContent from "./WordContent";
 import "./App.css";
 
 export default function Dictionary(props) {
@@ -9,15 +10,27 @@ export default function Dictionary(props) {
   let [definition, setDefinition] = useState("");
   let [loaded, setLoaded] = useState(false);
 
+  function handleResponse(response) {
+    console.log(response.data.word);
+    setLoaded(true);
+    setDefinition({
+      word: response.data.word,
+      phonetic: response.data.phonetic,
+      wordDefinition: response.data.meanings[0].definition,
+      synonyms: response.data.meanings[0].synonyms[0],
+      partOfSpeech: response.data.meanings[0].partOfSpeech,
+    });
+  }
+
   function handleChange(event) {
     setWord(event.target.value.trim());
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    setDefinition("strong and barely controllable emotion.");
-    setLoaded(true);
-    return definition;
+    let apiKey = "66b4t441aodafc3797bfd80f9495a36b";
+    let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${word}&key=${apiKey}`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (loaded) {
@@ -37,25 +50,25 @@ export default function Dictionary(props) {
             </form>
           </header>
         </div>
-        <div className="Word">{word} </div>
-        <div className="Definition fst-italic">"{definition}"</div>
+        <WordContent data={definition} />
+      </div>
+    );
+  } else {
+    return (
+      <div className="Dictionary">
+        <header>
+          <h1>Dictionary</h1>
+          <h2 className="pb-4">What word do you want to look up?</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              placeholder="Enter a word"
+              onChange={handleChange}
+            />
+            <input type="submit" value="Search" />
+          </form>
+        </header>
       </div>
     );
   }
-  return (
-    <div className="Dictionary">
-      <header>
-        <h1>Dictionary</h1>
-        <h2 className="pb-4">What word do you want to look up?</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="Enter a word"
-            onChange={handleChange}
-          />
-          <input type="submit" value="Search" />
-        </form>
-      </header>
-    </div>
-  );
 }

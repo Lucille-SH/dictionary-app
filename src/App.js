@@ -1,6 +1,7 @@
 import React from "react";
-import logo from "./logo-3.png";
+import logo from "./logo192.png";
 import "bootstrap/dist/css/bootstrap.css";
+
 import Dictionary from "./Dictionary";
 
 import "./App.css";
