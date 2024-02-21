@@ -54,7 +54,7 @@
 }
 
 .WordContent {
-  padding: 40px;
+  padding: 40px 40px 0;
   max-width: 800px;
 }
 
@@ -80,6 +80,11 @@
 .Synonyms p {
   display: inline-block;
   padding-right: 12px;
+}
+
+.PhotoContent {
+  display: flex;
+  justify-content: space-around;
 }
 
 footer {
@@ -120,5 +125,9 @@ footer a {
 
   .Meanings .Example {
     font-size: 14px;
+  }
+
+  .PhotoContent {
+    margin-bottom: 30px;
   }
 }
