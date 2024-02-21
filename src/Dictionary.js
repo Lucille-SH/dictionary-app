@@ -69,11 +69,8 @@ export default function Dictionary(props) {
           </header>
         </div>
         <WordContent data={results} />
-
-        <div className="PhotoContent grid text-center">
-          <div className="row m-5">
-            <PhotoContent data={photoResults} />
-          </div>
+        <div className="PhotoContainer container shadow">
+          <PhotoContent data={photoResults} />
         </div>
 
         <div className="pb-5">

@@ -82,9 +82,12 @@
   padding-right: 12px;
 }
 
-.PhotoContent {
-  display: flex;
-  justify-content: space-around;
+.PhotoContainer {
+  max-width: 720px;
+  display: block;
+  margin: 20px auto;
+  border: solid 1px rgba(2, 177, 186, 0.4);
+  border-radius: 5px;
 }
 
 footer {
@@ -96,7 +99,7 @@ footer a {
   text-decoration: none;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 900px) {
   .Dictionary h1 {
     font-size: 50px;
     line-height: 1.5;
