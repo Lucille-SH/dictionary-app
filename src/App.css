@@ -11,34 +11,75 @@
 .Dictionary-header {
   background-color: #eafcfc;
   margin: 0;
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.App h1 {
-  font-size: 55px;
+.Dictionary h1 {
+  font-size: 60px;
   line-height: 1.5;
+  font-family: "Comfortaa", sans-serif;
 }
 
-.App h2 {
+.Dictionary h2 {
   font-size: 25px;
   line-height: 1.5;
 }
 
-.App .Word {
-  font-size: 20px;
+.Dictionary .Search {
+  color: #333;
+  padding: 5px 5px 5px 12px;
+  width: 60%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: solid 1px rgba(2, 177, 186, 1);
+  margin: 0 5px;
+  line-height: 2;
+  font-size: 18px;
 }
 
-.indvMeanings {
-  border: solid 1px black;
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 10px;
+.Dictionary .Submit {
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: solid 1px rgba(2, 177, 186, 1);
+  line-height: 2;
+  background-color: rgb(2, 177, 186);
+  font-size: 18px;
+  transition: all 200ms ease-in-out;
+}
+
+.Dictionary .Submit:hover {
+  background-color: rgb(2, 209, 220);
 }
 
 .WordContent {
   padding: 40px;
   max-width: 800px;
+}
+
+.WordContent .Word {
+  font-size: 40px;
+}
+
+.Meanings .indvMeanings {
+  border: solid 1px rgba(2, 177, 186, 0.4);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.Meanings .Definition {
+  font-size: 18px;
+}
+
+.Meanings .Example {
+  font-size: 16px;
+}
+
+.Synonyms p {
+  display: inline-block;
+  padding-right: 12px;
 }
 
 footer {
@@ -48,4 +89,36 @@ footer {
 
 footer a {
   text-decoration: none;
+}
+
+@media (max-width: 560px) {
+  .Dictionary h1 {
+    font-size: 50px;
+    line-height: 1.5;
+  }
+
+  .Dictionary h2 {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .Dictionary .Search {
+    padding: 5px;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  .Dictionary .Submit {
+    padding: 5px 15px;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  .Meanings .Definition {
+    font-size: 16px;
+  }
+
+  .Meanings .Example {
+    font-size: 14px;
+  }
 }

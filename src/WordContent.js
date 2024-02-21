@@ -10,9 +10,9 @@ export default function WordContent(props) {
 
   return (
     <div className="WordContent container">
-      <h3 className="Word fw-bold fs-1">
+      <div className="Word fw-bold ps-2">
         {word} <span className="Phonetic fw-light fs-4">| {phonetic}</span>
-      </h3>
+      </div>
 
       <Meanings meanings={meanings} />
     </div>

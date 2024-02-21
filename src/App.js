@@ -10,7 +10,7 @@ export default function App(props) {
   return (
     <div className="App">
       <img src={logo} className="App-logo img-fluid" alt="logo" />
-      <Dictionary />
+      <Dictionary default="freedom" />
     </div>
   );
 }
