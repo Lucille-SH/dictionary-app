@@ -6,7 +6,7 @@ import Dictionary from "./Dictionary";
 
 import "./App.css";
 
-export default function App(props) {
+export default function App() {
   return (
     <div className="App">
       <img src={logo} className="App-logo img-fluid" alt="logo" />
